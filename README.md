@@ -25,7 +25,7 @@ Usage
 -----
 
 ```
-$ docker run -d --link rabbitmq:rabbitmq \
+$ docker run -d --link rabbitmq:amqp \
       -e "JEKYLL_REPO=<jekyll-website-repo-name>" \
       -v <www-dest>:/www \
       -v <local-git-repos>:/git:ro \

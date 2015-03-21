@@ -11,8 +11,8 @@ require 'find'
 $stdout.sync = true
 $stderr.sync = true
 
-conn = Bunny.new(:host => ENV['RABBITMQ_PORT_5672_TCP_ADDR'],
-                 :port => ENV['RABBITMQ_PORT_5672_TCP_PORT'])
+conn = Bunny.new(:host => ENV['AMQP_PORT_5672_TCP_ADDR'],
+                 :port => ENV['AMQP_PORT_5672_TCP_PORT'])
 conn.start
 
 ch = conn.create_channel
