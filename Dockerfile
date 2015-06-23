@@ -10,10 +10,14 @@ RUN apt-get update && apt-get install -y \
     ruby \
     ruby-dev
 
+ENV JEKYLL_VERSION 2.5.3
+
+RUN gem install --no-rdoc --no-ri \
+    jekyll -v ${JEKYLL_VERSION}
+
 RUN gem install --no-rdoc --no-ri \
     bunny \
     git \
-    jekyll \
     jekyll-sitemap \
     json
 
